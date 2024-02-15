@@ -1,19 +1,46 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modelo: Exercicio 1</title>
-    <link rel="stylesheet" href="./style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Números</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    /* Estilo personalizado */
+    body {
+      padding: 20px;
+
+    }
+    .short-input{
+        width: 200px;
+    }
+  </style>
 </head>
 <body>
+  <div class="container">
+    <h2>Calculadora de Números</h2>
+    <div class="form-group">
+      <label for="fnum">Número:</label>
+      <input type="number" class="form-control short-input" id="fnum">
+    </div>
+    <button onclick="addNum()" class="btn btn-primary">Adicionar</button>
+    <hr>
+    <div class="form-group">
+      <label for="flista">Lista de Números:</label>
+      <select class="form-control short-input" id="flista" multiple></select>
+    </div>
+    <div id="res"></div>
+    <button onclick="finalizaContagem()" class="btn btn-success mt-3">Finalizar Contagem</button>
+    <!-- Botão Limpar -->
+<button onclick="limparLista()" class="btn btn-danger mt-3">Limpar</button>
 
-    <header><h1>Título</h1></header>
-    <section>
-        <div>testando</div>
-        <div>ola</div>
-    </section>
-    <footer><p>&copy;Copywrite</p></footer>
-    <script src="./script.js"></script>
+  </div>
+
+ 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="./script.js"></script>
 </body>
 </html>
